@@ -87,7 +87,11 @@ describe("Button", () => {
   })
 
   it("sets data attributes for variant and size", () => {
-    const { container } = render(<Button variant="secondary" size="lg">Data</Button>)
+    const { container } = render(
+      <Button variant="secondary" size="lg">
+        Data
+      </Button>
+    )
     const button = container.querySelector("button")
     expect(button).toHaveAttribute("data-variant", "secondary")
     expect(button).toHaveAttribute("data-size", "lg")

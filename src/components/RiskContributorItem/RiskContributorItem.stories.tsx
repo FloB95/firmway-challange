@@ -83,7 +83,7 @@ export const CustomTotalDays: Story = {
 
 export const AllRiskTypes: Story = {
   render: () => (
-    <div className="flex flex-col gap-4 max-w-[600px]">
+    <div className="flex max-w-[600px] flex-col gap-4">
       <RiskContributorItem
         item={{
           id: "earthquake",

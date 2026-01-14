@@ -18,11 +18,11 @@ test.describe("DisruptionChart", () => {
     })
 
     test("displays statistics cards", async ({ page }) => {
-      // Verify all stat labels are present
-      await expect(page.getByText("Probability")).toBeVisible()
-      await expect(page.getByText("Mean")).toBeVisible()
-      await expect(page.getByText("P90")).toBeVisible()
-      await expect(page.getByText("MTTR")).toBeVisible()
+      // Verify all stat labels are present (use exact match to avoid multiple matches)
+      await expect(page.getByText("Probability", { exact: true })).toBeVisible()
+      await expect(page.getByText("Mean", { exact: true })).toBeVisible()
+      await expect(page.getByText("P90", { exact: true })).toBeVisible()
+      await expect(page.getByText("MTTR", { exact: true })).toBeVisible()
     })
   })
 
@@ -87,13 +87,13 @@ test.describe("DisruptionChart", () => {
     test("renders reference lines for safety stock and mean disruption", async ({ page }) => {
       const chartSvg = page.locator('[data-slot="chart"] svg')
 
-      // Safety stock reference line (cyan/teal)
+      // Safety stock reference line (cyan/teal) - use toBeAttached for SVG elements
       const safetyStockLine = chartSvg.locator('line[stroke="#00dbff"]')
-      await expect(safetyStockLine).toBeVisible()
+      await expect(safetyStockLine).toBeAttached()
 
-      // Mean disruption reference line (black)
+      // Mean disruption reference line (black) - use toBeAttached for SVG elements
       const meanDisruptionLine = chartSvg.locator('line[stroke="#000000"]')
-      await expect(meanDisruptionLine).toBeVisible()
+      await expect(meanDisruptionLine).toBeAttached()
     })
   })
 

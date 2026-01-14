@@ -136,15 +136,13 @@ export const WithHeaderAndFooter: Story = {
     <Item variant="outline">
       <ItemHeader>
         <ItemTitle>Header Title</ItemTitle>
-        <span className="text-sm text-muted-foreground">Meta info</span>
+        <span className="text-muted-foreground text-sm">Meta info</span>
       </ItemHeader>
       <ItemContent>
-        <ItemDescription>
-          This is the main content of the item that spans the full width.
-        </ItemDescription>
+        <ItemDescription>This is the main content of the item that spans the full width.</ItemDescription>
       </ItemContent>
       <ItemFooter>
-        <span className="text-xs text-muted-foreground">Footer left</span>
+        <span className="text-muted-foreground text-xs">Footer left</span>
         <Button size="sm">Action</Button>
       </ItemFooter>
     </Item>
@@ -169,9 +167,7 @@ export const CompleteItem: Story = {
       </ItemMedia>
       <ItemContent>
         <ItemTitle>Complete Example</ItemTitle>
-        <ItemDescription>
-          An item demonstrating all available sub-components.
-        </ItemDescription>
+        <ItemDescription>An item demonstrating all available sub-components.</ItemDescription>
       </ItemContent>
       <ItemActions>
         <Button size="sm">View</Button>
@@ -209,7 +205,7 @@ export const ItemGroupExample: Story = {
 
 export const AllVariants: Story = {
   render: () => (
-    <div className="flex flex-col gap-4 max-w-md">
+    <div className="flex max-w-md flex-col gap-4">
       <Item variant="default">
         <ItemContent>
           <ItemTitle>Default Variant</ItemTitle>

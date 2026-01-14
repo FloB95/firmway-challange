@@ -59,25 +59,25 @@ export const CustomWidth: Story = {
 
 export const AllStates: Story = {
   render: () => (
-    <div className="flex flex-col gap-4 w-64">
+    <div className="flex w-64 flex-col gap-4">
       <div>
-        <p className="text-sm mb-2">0%</p>
+        <p className="mb-2 text-sm">0%</p>
         <Progress value={0} />
       </div>
       <div>
-        <p className="text-sm mb-2">25%</p>
+        <p className="mb-2 text-sm">25%</p>
         <Progress value={25} />
       </div>
       <div>
-        <p className="text-sm mb-2">50%</p>
+        <p className="mb-2 text-sm">50%</p>
         <Progress value={50} />
       </div>
       <div>
-        <p className="text-sm mb-2">75%</p>
+        <p className="mb-2 text-sm">75%</p>
         <Progress value={75} />
       </div>
       <div>
-        <p className="text-sm mb-2">100%</p>
+        <p className="mb-2 text-sm">100%</p>
         <Progress value={100} />
       </div>
     </div>
@@ -86,13 +86,13 @@ export const AllStates: Story = {
 
 export const InContext: Story = {
   render: () => (
-    <div className="p-4 border rounded-lg max-w-sm">
-      <div className="flex justify-between mb-2">
+    <div className="max-w-sm rounded-lg border p-4">
+      <div className="mb-2 flex justify-between">
         <span className="text-sm font-medium">Upload Progress</span>
-        <span className="text-sm text-muted-foreground">67%</span>
+        <span className="text-muted-foreground text-sm">67%</span>
       </div>
       <Progress value={67} />
-      <p className="text-xs text-muted-foreground mt-2">Uploading file.zip...</p>
+      <p className="text-muted-foreground mt-2 text-xs">Uploading file.zip...</p>
     </div>
   ),
 }

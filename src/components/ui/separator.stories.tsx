@@ -25,13 +25,13 @@ export const Default: Story = {
   render: (args) => (
     <div className="w-64">
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Title</h4>
-        <p className="text-sm text-muted-foreground">Description text</p>
+        <h4 className="text-sm leading-none font-medium">Title</h4>
+        <p className="text-muted-foreground text-sm">Description text</p>
       </div>
       <Separator {...args} className="my-4" />
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Another Section</h4>
-        <p className="text-sm text-muted-foreground">More content here</p>
+        <h4 className="text-sm leading-none font-medium">Another Section</h4>
+        <p className="text-muted-foreground text-sm">More content here</p>
       </div>
     </div>
   ),
@@ -81,12 +81,10 @@ export const InNavigation: Story = {
 
 export const InCard: Story = {
   render: () => (
-    <div className="rounded-lg border p-4 w-64">
+    <div className="w-64 rounded-lg border p-4">
       <h3 className="font-medium">Card Title</h3>
       <Separator className="my-4" />
-      <p className="text-sm text-muted-foreground">
-        Card content goes here with more detailed information.
-      </p>
+      <p className="text-muted-foreground text-sm">Card content goes here with more detailed information.</p>
       <Separator className="my-4" />
       <div className="flex justify-end gap-2">
         <button className="text-sm">Cancel</button>
@@ -111,18 +109,18 @@ export const InList: Story = {
 
 export const CustomStyling: Story = {
   render: () => (
-    <div className="space-y-4 w-64">
+    <div className="w-64 space-y-4">
       <div>
-        <p className="text-sm mb-2">Default</p>
+        <p className="mb-2 text-sm">Default</p>
         <Separator />
       </div>
       <div>
-        <p className="text-sm mb-2">Thicker</p>
+        <p className="mb-2 text-sm">Thicker</p>
         <Separator className="h-0.5" />
       </div>
       <div>
-        <p className="text-sm mb-2">Dashed (custom)</p>
-        <Separator className="border-t border-dashed bg-transparent h-0" />
+        <p className="mb-2 text-sm">Dashed (custom)</p>
+        <Separator className="h-0 border-t border-dashed bg-transparent" />
       </div>
     </div>
   ),

@@ -15,7 +15,7 @@ export const Default: Story = {
   render: () => (
     <ScrollArea className="h-72 w-48 rounded-md border">
       <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
+        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
         {tags.map((tag) => (
           <div key={tag}>
             <div className="text-sm">{tag}</div>
@@ -29,13 +29,10 @@ export const Default: Story = {
 
 export const HorizontalScrolling: Story = {
   render: () => (
-    <ScrollArea className="w-96 whitespace-nowrap rounded-md border">
+    <ScrollArea className="w-96 rounded-md border whitespace-nowrap">
       <div className="flex w-max space-x-4 p-4">
         {Array.from({ length: 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="flex h-24 w-24 shrink-0 items-center justify-center rounded-md border bg-muted"
-          >
+          <div key={i} className="bg-muted flex h-24 w-24 shrink-0 items-center justify-center rounded-md border">
             Item {i + 1}
           </div>
         ))}
@@ -66,9 +63,9 @@ export const BothDirections: Story = {
       <div className="w-[500px] p-4">
         <h4 className="mb-4 text-sm font-medium">Both Directions</h4>
         {Array.from({ length: 30 }).map((_, i) => (
-          <p key={i} className="whitespace-nowrap text-sm mb-2">
-            Row {i + 1}: This is a very long line of text that will cause horizontal scrolling
-            when the content exceeds the container width.
+          <p key={i} className="mb-2 text-sm whitespace-nowrap">
+            Row {i + 1}: This is a very long line of text that will cause horizontal scrolling when the content exceeds
+            the container width.
           </p>
         ))}
       </div>
@@ -81,7 +78,7 @@ export const CustomHeight: Story = {
   render: () => (
     <ScrollArea className="h-[400px] w-64 rounded-md border">
       <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Long List</h4>
+        <h4 className="mb-4 text-sm leading-none font-medium">Long List</h4>
         {Array.from({ length: 100 }).map((_, i) => (
           <div key={i} className="py-2">
             <div className="text-sm">Item {i + 1}</div>
@@ -96,11 +93,11 @@ export const CustomHeight: Story = {
 export const CardList: Story = {
   render: () => (
     <ScrollArea className="h-[300px] w-80 rounded-md border">
-      <div className="p-4 space-y-4">
+      <div className="space-y-4 p-4">
         {Array.from({ length: 10 }).map((_, i) => (
           <div key={i} className="rounded-lg border p-4">
             <h5 className="font-medium">Card {i + 1}</h5>
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className="text-muted-foreground mt-2 text-sm">
               This is the content of card {i + 1}. It contains some description text.
             </p>
           </div>

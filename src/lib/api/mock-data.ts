@@ -213,5 +213,8 @@ export const MOCK_RISK_DETAILS: Record<string, RiskDetailResponse> = {
  * Helper to get risk ID from title
  */
 export function getRiskIdFromTitle(title: string): string {
-  return title.toLowerCase().replace(/\s*\/\s*/g, "-").replace(/\s+/g, "-")
+  return title
+    .toLowerCase()
+    .replace(/\s*\/\s*/g, "-")
+    .replace(/\s+/g, "-")
 }
